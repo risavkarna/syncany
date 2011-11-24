@@ -69,32 +69,32 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libnautilus-syncany.so: ${OBJECTFILES
 ${OBJECTDIR}/dropbox.o: dropbox.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox.o dropbox.c
+	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-3.0 -I/usr/lib/gtk-3.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox.o dropbox.c
 
 ${OBJECTDIR}/dropbox-client-util.o: dropbox-client-util.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox-client-util.o dropbox-client-util.c
+	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-3.0 -I/usr/lib/gtk-3.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox-client-util.o dropbox-client-util.c
 
 ${OBJECTDIR}/dropbox-command-client.o: dropbox-command-client.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox-command-client.o dropbox-command-client.c
+	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-3.0 -I/usr/lib/gtk-3.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox-command-client.o dropbox-command-client.c
 
 ${OBJECTDIR}/nautilus-dropbox-hooks.o: nautilus-dropbox-hooks.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/nautilus-dropbox-hooks.o nautilus-dropbox-hooks.c
+	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-3.0 -I/usr/lib/gtk-3.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/nautilus-dropbox-hooks.o nautilus-dropbox-hooks.c
 
 ${OBJECTDIR}/nautilus-dropbox.o: nautilus-dropbox.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/nautilus-dropbox.o nautilus-dropbox.c
+	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-3.0 -I/usr/lib/gtk-3.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/nautilus-dropbox.o nautilus-dropbox.c
 
 ${OBJECTDIR}/dropbox-client.o: dropbox-client.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox-client.o dropbox-client.c
+	$(COMPILE.c) -g -Wall -DHAVE_CONFIG_H -DND_DEBUG -I/usr/include/gtk-3.0 -I/usr/lib/gtk-3.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/nautilus -I/usr/lib/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I. -fPIC  -MMD -MP -MF $@.d -o ${OBJECTDIR}/dropbox-client.o dropbox-client.c
 
 # Subprojects
 .build-subprojects:
