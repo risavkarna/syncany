@@ -28,7 +28,6 @@
                   <Component id="txtAccessKey" alignment="0" pref="332" max="32767" attributes="0"/>
                   <Component id="txtSecretKey" alignment="0" pref="332" max="32767" attributes="0"/>
                   <Component id="txtBucketName" alignment="0" pref="332" max="32767" attributes="0"/>
-                  <Component id="cmbLocation" alignment="0" pref="332" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -52,11 +51,6 @@
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="cmbLocation" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,21 +71,6 @@
     <Component class="javax.swing.JPasswordField" name="txtSecretKey">
       <Properties>
         <Property name="name" type="java.lang.String" value="txtSecretKey" noResource="true"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="cmbLocation">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
-            <StringItem index="0" value="ap-northeast-1"/>
-            <StringItem index="1" value="ap-southeast-1"/>
-            <StringItem index="2" value="eu-west-1"/>
-            <StringItem index="3" value="us-east-1"/>
-            <StringItem index="4" value="us-west-1"/>
-          </StringArray>
-        </Property>
-        <Property name="selectedIndex" type="int" value="3"/>
-        <Property name="name" type="java.lang.String" value="cmbLocation" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtBucketName">

@@ -37,19 +37,6 @@ public class SwiftConfigPanel extends ConfigPanel {
         super(connection);
         resourceBundle = Config.getInstance().getResourceBundle();
         initComponents();
-
-        DefaultComboBoxModel locModel = new DefaultComboBoxModel();
-
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_ASIA_PACIFIC, "Asia Pacific"));
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_ASIA_PACIFIC_NORTHEAST, "Asia Pacific: Northeast"));
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_ASIA_PACIFIC_SINGAPORE, "Asia Pacific: Singapore"));
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_ASIA_PACIFIC_SOUTHEAST, "Asia Pacific: Southeast"));
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_ASIA_PACIFIC_TOKYO, "Asia Pacific: Tokyo"));
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_EUROPE, "Europe"));
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_US, "United States"));
-        locModel.addElement(new LocationComboBoxItem(S3Bucket.LOCATION_US_WEST, "United States: West"));
-
-        cmbLocation.setModel(locModel);
     }
 
     @Override
@@ -57,19 +44,6 @@ public class SwiftConfigPanel extends ConfigPanel {
         txtAccessKey.setText(getConnection().getAccessKey());
         txtSecretKey.setText(getConnection().getSecretKey());
         txtBucketName.setText(getConnection().getBucket());
-
-        // cp. http://jets3t.s3.amazonaws.com/api/constant-values.html#org.jets3t.service.model.S3Bucket.LOCATION_ASIA_PACIFIC
-
-        for (int i=0; i<cmbLocation.getItemCount(); i++) {
-            LocationComboBoxItem item = (LocationComboBoxItem) cmbLocation.getItemAt(i);
-
-            if ((getConnection().getLocation() == null && item.getId() == null) // US entry is default (= null)
-                || (item.getId() != null && item.getId().equals(getConnection().getLocation()))) { // All other entries
-
-                cmbLocation.setSelectedIndex(i);
-                break;
-            }
-        }
     }
 
     @Override
@@ -77,7 +51,6 @@ public class SwiftConfigPanel extends ConfigPanel {
         getConnection().setAccessKey(txtAccessKey.getText());
         getConnection().setSecretKey(new String(txtSecretKey.getPassword()));
         getConnection().setBucket(txtBucketName.getText());
-        getConnection().setLocation(((LocationComboBoxItem) cmbLocation.getSelectedItem()).getId());
     }
 
     @Override
@@ -93,41 +66,31 @@ public class SwiftConfigPanel extends ConfigPanel {
     @SuppressWarnings("unchecked")
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
         private void initComponents() {
-
-                jLabel4 = new javax.swing.JLabel();
                 txtAccessKey = new javax.swing.JTextField();
                 txtSecretKey = new javax.swing.JPasswordField();
-                cmbLocation = new javax.swing.JComboBox();
                 txtBucketName = new javax.swing.JTextField();
-                jLabel3 = new javax.swing.JLabel();
+
                 jLabel1 = new javax.swing.JLabel();
                 jLabel2 = new javax.swing.JLabel();
-
-                jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-                jLabel4.setText(resourceBundle.getString("s3_location_name"));
-                jLabel4.setName("jLabel4"); // NOI18N
+                jLabel3 = new javax.swing.JLabel();
 
                 txtAccessKey.setName("txtAccessKey"); // NOI18N
 
                 txtSecretKey.setName("txtSecretKey"); // NOI18N
 
-                cmbLocation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ap-northeast-1", "ap-southeast-1", "eu-west-1", "us-east-1", "us-west-1" }));
-                cmbLocation.setSelectedIndex(3);
-                cmbLocation.setName("cmbLocation"); // NOI18N
-
                 txtBucketName.setName("txtBucketName"); // NOI18N
 
-                jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-                jLabel3.setText(resourceBundle.getString("s3_bucket_name"));
-                jLabel3.setName("jLabel3"); // NOI18N
-
                 jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-                jLabel1.setText(resourceBundle.getString("s3_access_key"));
+                jLabel1.setText(resourceBundle.getString("swift_user"));
                 jLabel1.setName("jLabel1"); // NOI18N
 
                 jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-                jLabel2.setText(resourceBundle.getString("s3_secret_key"));
+                jLabel2.setText(resourceBundle.getString("swift_password"));
                 jLabel2.setName("jLabel2"); // NOI18N
+
+                jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+                jLabel3.setText(resourceBundle.getString("swift_location"));
+                jLabel3.setName("jLabel3"); // NOI18N
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
                 this.setLayout(layout);
@@ -137,14 +100,12 @@ public class SwiftConfigPanel extends ConfigPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel1)
                                         .addComponent(jLabel2)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel4))
+                                        .addComponent(jLabel3))
                                 .addGap(33, 33, 33)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtAccessKey, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                                         .addComponent(txtSecretKey, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                                        .addComponent(txtBucketName, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                                        .addComponent(cmbLocation, 0, 332, Short.MAX_VALUE))
+                                        .addComponent(txtBucketName, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
                 layout.setVerticalGroup(
@@ -162,49 +123,15 @@ public class SwiftConfigPanel extends ConfigPanel {
                                         .addComponent(txtBucketName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel3))
                                 .addGap(15, 15, 15)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(cmbLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel4))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
         }// </editor-fold>//GEN-END:initComponents
         // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JComboBox cmbLocation;
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JLabel jLabel3;
-        private javax.swing.JLabel jLabel4;
         private javax.swing.JTextField txtAccessKey;
         private javax.swing.JTextField txtBucketName;
         private javax.swing.JPasswordField txtSecretKey;
         // End of variables declaration//GEN-END:variables
-
-
-    private class LocationComboBoxItem {
-        private String id;
-        private String description;
-
-        public LocationComboBoxItem(String id, String description) {
-            this.id = id;
-            this.description = description;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public String getId() {
-            return id;
-        }
-
-        @Override
-        public String toString() {
-            if (id == null) {
-                return description;
-            }
-            else {
-                return description+" ("+id+")";
-            }
-        }
-    }
 }

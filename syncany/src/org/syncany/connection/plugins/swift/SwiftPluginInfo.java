@@ -42,7 +42,7 @@ public class SwiftPluginInfo extends PluginInfo {
 
     @Override
     public String getName() {
-        return resourceBundle.getString("s3_plugin_name");
+        return resourceBundle.getString("swift_plugin_name");
     }
 
     @Override
@@ -52,7 +52,7 @@ public class SwiftPluginInfo extends PluginInfo {
 
     @Override
     public String getDescripton() {
-        return resourceBundle.getString("s3_plugin_description");
+        return resourceBundle.getString("swift_plugin_description");
     }
 
     @Override
