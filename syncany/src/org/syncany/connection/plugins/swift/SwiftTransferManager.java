@@ -40,7 +40,7 @@ public class SwiftTransferManager extends RestTransferManager {
 
     @Override
     protected RestStorageService createService() throws ServiceException {
-        return new RestSwiftService(getConnection().getCredentials());
+        return new RestSwiftService(getConnection().getCredentials(), getConnection().getHost());
     }
 
     @Override
