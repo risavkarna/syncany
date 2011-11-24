@@ -55,36 +55,32 @@
       </Group>
     </DimensionLayout>
   </Layout>
+
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Location:"/>
-        <Property name="name" type="java.lang.String" value="jLabel4" noResource="true"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="txtAccessKey">
       <Properties>
         <Property name="name" type="java.lang.String" value="txtAccessKey" noResource="true"/>
       </Properties>
     </Component>
+
     <Component class="javax.swing.JPasswordField" name="txtSecretKey">
       <Properties>
         <Property name="name" type="java.lang.String" value="txtSecretKey" noResource="true"/>
       </Properties>
     </Component>
+
     <Component class="javax.swing.JTextField" name="txtBucketName">
       <Properties>
         <Property name="name" type="java.lang.String" value="txtBucketName" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+
+    <Component class="javax.swing.JTextField" name="txtHost">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Bucket Name:"/>
-        <Property name="name" type="java.lang.String" value="jLabel3" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="txtHost" noResource="true"/>
       </Properties>
     </Component>
+
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="2"/>
@@ -92,11 +88,28 @@
         <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
       </Properties>
     </Component>
+
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="2"/>
         <Property name="text" type="java.lang.String" value="Secret Key:"/>
         <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
+      </Properties>
+    </Component>
+
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="2"/>
+        <Property name="text" type="java.lang.String" value="Bucket Name:"/>
+        <Property name="name" type="java.lang.String" value="jLabel3" noResource="true"/>
+      </Properties>
+    </Component>
+
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="2"/>
+        <Property name="text" type="java.lang.String" value="Host:"/>
+        <Property name="name" type="java.lang.String" value="jLabel4" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>

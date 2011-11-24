@@ -44,6 +44,7 @@ public class SwiftConfigPanel extends ConfigPanel {
         txtAccessKey.setText(getConnection().getAccessKey());
         txtSecretKey.setText(getConnection().getSecretKey());
         txtBucketName.setText(getConnection().getBucket());
+        txtHost.setText(getConnection().getHost());
     }
 
     @Override
@@ -51,6 +52,7 @@ public class SwiftConfigPanel extends ConfigPanel {
         getConnection().setAccessKey(txtAccessKey.getText());
         getConnection().setSecretKey(new String(txtSecretKey.getPassword()));
         getConnection().setBucket(txtBucketName.getText());
+        getConnection().setHost(txtHost.getText());
     }
 
     @Override
@@ -69,16 +71,17 @@ public class SwiftConfigPanel extends ConfigPanel {
                 txtAccessKey = new javax.swing.JTextField();
                 txtSecretKey = new javax.swing.JPasswordField();
                 txtBucketName = new javax.swing.JTextField();
+                txtHost = new javax.swing.JTextField();
 
                 jLabel1 = new javax.swing.JLabel();
                 jLabel2 = new javax.swing.JLabel();
                 jLabel3 = new javax.swing.JLabel();
+                jLabel4 = new javax.swing.JLabel();
 
                 txtAccessKey.setName("txtAccessKey"); // NOI18N
-
                 txtSecretKey.setName("txtSecretKey"); // NOI18N
-
                 txtBucketName.setName("txtBucketName"); // NOI18N
+                txtHost.setName("txtHost"); // NOI18N
 
                 jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
                 jLabel1.setText(resourceBundle.getString("swift_user"));
@@ -89,8 +92,12 @@ public class SwiftConfigPanel extends ConfigPanel {
                 jLabel2.setName("jLabel2"); // NOI18N
 
                 jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-                jLabel3.setText(resourceBundle.getString("swift_location"));
+                jLabel3.setText(resourceBundle.getString("swift_bucket"));
                 jLabel3.setName("jLabel3"); // NOI18N
+
+                jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+                jLabel4.setText(resourceBundle.getString("swift_host"));
+                jLabel4.setName("jLabel4"); // NOI18N
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
                 this.setLayout(layout);
@@ -100,12 +107,14 @@ public class SwiftConfigPanel extends ConfigPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel1)
                                         .addComponent(jLabel2)
-                                        .addComponent(jLabel3))
+                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel4))
                                 .addGap(33, 33, 33)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtAccessKey, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                                         .addComponent(txtSecretKey, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                                        .addComponent(txtBucketName, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE))
+                                        .addComponent(txtBucketName, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
+                                        .addComponent(txtHost, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
                 layout.setVerticalGroup(
@@ -123,15 +132,19 @@ public class SwiftConfigPanel extends ConfigPanel {
                                         .addComponent(txtBucketName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel3))
                                 .addGap(15, 15, 15)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(txtHost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel4))
+                                .addGap(15, 15, 15)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
-        }// </editor-fold>//GEN-END:initComponents
-        // Variables declaration - do not modify//GEN-BEGIN:variables
+        }
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JLabel jLabel3;
+        private javax.swing.JLabel jLabel4;
         private javax.swing.JTextField txtAccessKey;
-        private javax.swing.JTextField txtBucketName;
         private javax.swing.JPasswordField txtSecretKey;
-        // End of variables declaration//GEN-END:variables
+        private javax.swing.JTextField txtBucketName;
+        private javax.swing.JTextField txtHost;
 }

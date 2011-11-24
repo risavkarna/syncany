@@ -18,7 +18,7 @@
 package org.syncany.connection.plugins.swift;
 
 import org.jets3t.service.ServiceException;
-import org.jets3t.service.impl.rest.httpclient.RestS3Service;
+import org.jets3t.service.impl.rest.httpclient.RestSwiftService;
 import org.jets3t.service.impl.rest.httpclient.RestStorageService;
 import org.jets3t.service.model.S3Bucket;
 import org.jets3t.service.model.StorageBucket;
@@ -40,11 +40,11 @@ public class SwiftTransferManager extends RestTransferManager {
 
     @Override
     protected RestStorageService createService() throws ServiceException {
-        return new RestS3Service(getConnection().getCredentials());
+        return new RestSwiftService(getConnection().getCredentials());
     }
 
     @Override
     protected StorageBucket createBucket() {
-        return new S3Bucket(getConnection().getBucket(), getConnection().getLocation());
+        return new S3Bucket(getConnection().getBucket(), getConnection().getHost());
     }
 }

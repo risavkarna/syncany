@@ -34,7 +34,7 @@ import org.syncany.connection.plugins.rest.RestConnection;
  */
 public class SwiftConnection extends RestConnection {
     // cp. http://jets3t.s3.amazonaws.com/api/constant-values.html#org.jets3t.service.model.S3Bucket.LOCATION_ASIA_PACIFIC
-    private String location;
+    private String host;
 
     @Override
     public PluginInfo getPluginInfo() {
@@ -56,29 +56,29 @@ public class SwiftConnection extends RestConnection {
         return new AWSCredentials(getAccessKey(), getSecretKey());
     }
 
-    public String getLocation() {
-        return location;
+    public String getHost() {
+        return host;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setHost(String host) {
+        this.host = host;
     }
 
     @Override
     public void load(ConfigNode node) throws ConfigException {
         super.load(node);
-        location = node.getProperty("location", S3Bucket.LOCATION_US);
+        host = node.getProperty("host", S3Bucket.LOCATION_US);
     }
 
     @Override
     public void save(ConfigNode node) {
         super.save(node);
-        node.setProperty("location", location);
+        node.setProperty("host", host);
     }
 
     @Override
     public String toString() {
         return SwiftConnection.class.getSimpleName()
-            + "[" + resourceBundle.getString("bucket") + "=" + bucket + ", " + resourceBundle.getString("location") + "=" + location+"]";
+            + "[" + resourceBundle.getString("bucket") + "=" + bucket + ", " + resourceBundle.getString("host") + "=" + host+"]";
     }
 }
