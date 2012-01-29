@@ -68,11 +68,11 @@ Here we create empty container named syncany by uploading a file and deleting it
 
     % sudo apt-get install -y python-gtk2 python-notify
 
-## Step 7: Compiling Syncany
+## Step 7: Compiling and Running Syncany!
 
+    % git clone https://github.com/shouichi/syncany.git
+    % cd syncany
+    % git checkout origin/nii
     % cd syncany
     % ant
-
-## Step 8: Start Syncany!
-
-    % ./syncany/bin/syncany.sh
+    % ./bin/syncany.sh
