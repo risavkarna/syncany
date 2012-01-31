@@ -66,13 +66,27 @@ Here we create empty container named syncany by uploading a file and deleting it
 
 ## Step 5: Installing Syncany Dependencies.
 
-    % sudo apt-get install -y python-gtk2 python-notify
+    % sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+    % sudo apt-get update
+    % sudo apt-get install -y sun-java6-jdk sun-java6-javadb ant ant-optional \
+        libcommons-codec-java libcommons-cli-java libcommons-lang-java \
+        libcommons-collections3-java libcommons-logging-java libcommons-vfs-java \
+        libdom4j-java liblog4j1.2-java libjava-gnome-java libappframework-java \
+        libcommons-httpclient-java libj2ssh-java libcommons-net2-java openjdk-6-jdk \
+        libgtk-3-dev python-gtk2 python-notify
 
-## Step 7: Compiling and Running Syncany!
+## Step 6: Compiling Syncany Nautilus Extension
 
     % git clone https://github.com/shouichi/syncany.git
     % cd syncany
     % git checkout origin/nii
-    % cd syncany
+    % cd nautilus-syncany
+    % make
+    % sudo cp dist/Debug/GNU-Linux-x86/libnautilus-syncany.so /usr/lib/nautilus/extensions-2.0/
+    % nautilus -q && killall nautilus
+
+## Step 7: Compiling and Running Syncany!
+
+    % cd ../syncany
     % ant
     % ./bin/syncany.sh
